@@ -50,6 +50,20 @@ RUN set -x && \
 
 RUN set -x && \
   pip3 install \
+  msgpack-python \
+  pyyaml \
+  h5py \
+  tqdm \
+  xlrd \
+  xlwt \
+  \
+  numpy \
+  scipy \
+  sympy \
+  pandas \
+  matplotlib \
+  bokeh \
+  \
   sphinx \
   sphinx-intl \
   sphinx-autobuild \
@@ -66,13 +80,14 @@ RUN set -x && \
   sphinx_rtd_theme \
   sphinx_bootstrap_theme \
   nbsphinx \
+  \
   ipykernel \
+  ipywidgets \
   jupyterlab \
-  numpy \
-  scipy \
-  simpy \
-  pandas \
-  matplotlib 
+  \
+  scikit-learn \
+  requests \
+  beautifulsoup4
 
 # -----------------------------------------------------------------------------
 # entrypoint
@@ -81,5 +96,6 @@ COPY scripts/* /usr/local/bin/
 RUN set -x && \
   chmod +x /usr/local/bin/*.sh
 
+USER ${USER_NAME}:${GROUP_NAME}
 WORKDIR "${WORKDIR}"
 CMD ["/usr/local/bin/usage.sh"]
