@@ -1,4 +1,4 @@
-PACKAGE="ghcr.io/hiracchi/doctools"
+PACKAGE="ghcr.io/hiracchi/docker-doctools"
 TAG=latest
 CONTAINER_NAME="doctools"
 

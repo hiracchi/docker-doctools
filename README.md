@@ -8,4 +8,4 @@
 ## usage
 
 ```
-docker run -it --rm --volume "${PWD}:/work" ghcr.io/hiracchi/doctools <command>
+docker run -it --rm --volume "${PWD}:/work" ghcr.io/hiracchi/docker-doctools <command>
