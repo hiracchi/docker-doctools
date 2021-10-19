@@ -16,9 +16,7 @@ start:
 		--name ${CONTAINER_NAME} \
 		-u $(USER_ID):$(GROUP_ID) \
 		--volume "${PWD}:/work" \
-		"${PACKAGE}:${TAG}"
-	#sleep 4
-	docker ps -a
+		"${PACKAGE}:${TAG}" 
 
 stop:
 	docker rm -f ${CONTAINER_NAME}
@@ -27,7 +25,9 @@ stop:
 restart: stop start
 
 
-term:
+debug:
+	\$(eval USER_ID := $(shell id -u))
+	\$(eval GROUP_ID := $(shell id -g))
 	docker run -it \
 		--rm \
 		--name ${CONTAINER_NAME} \

@@ -27,67 +27,47 @@ RUN set -x && \
   gv nkf gnuplot tgif gimp inkscape mimetex latexdiff latexmk \
   libjs-mathjax \
   fonts-mathjax fonts-mathjax-extras \
+  \
+  python3-sphinx \
+  sphinx-intl \
+  python3-sphinx-celery \
+  python3-sphinx-autobuild \
+  python3-sphinx-autorun \
+  python3-sphinx-paramlinks \
+  python3-sphinxcontrib.actdiag \
+  python3-sphinxcontrib.bibtex \
+  python3-sphinxcontrib.blockdiag \
+  python3-sphinxcontrib.nwdiag \
+  python3-sphinxcontrib.seqdiag \
+  python3-sphinxcontrib.plantuml \
+  python3-sphinxcontrib.programoutput \
+  python3-sphinxcontrib.spelling \
+  python3-sphinx-bootstrap-theme \
+  python3-sphinx-rtd-theme \
+  python3-notebook \
+  python3-nbsphinx \
+  python3-ipywidgets \
+  python3-widgetsnbextension \
+  python3-ipykernel \
+  python3-msgpack \
+  python3-yaml \
+  python3-h5py \
+  python3-tqdm \
+  python3-xlrd \
+  python3-xlwt \
+  python3-numpy \
+  python3-scipy \
+  python3-sympy \
+  python3-pandas \
+  python3-matplotlib \
+  python3-sklearn-lib \
+  python3-requests \
+  python3-bs4 \
+  cython3 \
   && \
   apt-get clean && \
   apt-get autoclean && \
   rm -rf /var/lib/apt/lists/* 
-
-# python3-sphinx
-# sphinx-intl
-# python3-sphinx-celery
-# python3-sphinx-autorun
-# python3-sphinx-paramlinks
-# python3-sphinxcontrib.bibtex
-# python3-sphinxcontrib.blockdiag
-# python3-sphinxcontrib.nwdiag
-# python3-sphinxcontrib.seqdiag
-# python3-sphinxcontrib.plantuml
-# python3-sphinxcontrib.programoutput
-# python3-sphinxcontrib.spelling
-# python3-sphinx-bootstrap-theme
-# python3-sphinx-rtd-theme
-
-
-RUN set -x && \
-  pip3 install \
-  msgpack-python \
-  pyyaml \
-  h5py \
-  tqdm \
-  xlrd \
-  xlwt \
-  \
-  numpy \
-  scipy \
-  sympy \
-  pandas \
-  matplotlib \
-  bokeh \
-  \
-  sphinx \
-  sphinx-intl \
-  sphinx-autobuild \
-  sphinx-autorun \
-  sphinx-paramlinks \
-  sphinx_celery \
-  sphinxcontrib-actdiag \
-  sphinxcontrib-blockdiag \
-  sphinxcontrib-nwdiag \
-  sphinxcontrib-seqdiag \
-  sphinxcontrib-plantuml \
-  sphinxcontrib-programoutput \
-  sphinxcontrib-spelling \
-  sphinx_rtd_theme \
-  sphinx_bootstrap_theme \
-  nbsphinx \
-  \
-  ipykernel \
-  ipywidgets \
-  jupyterlab \
-  \
-  scikit-learn \
-  requests \
-  beautifulsoup4
 
 # -----------------------------------------------------------------------------
 # entrypoint
