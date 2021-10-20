@@ -78,4 +78,5 @@ RUN set -x && \
 
 USER ${USER_NAME}:${GROUP_NAME}
 WORKDIR "${WORKDIR}"
+EXPOSE 8000
 CMD ["/usr/local/bin/usage.sh"]
