@@ -1,4 +1,4 @@
-FROM ghcr.io/hiracchi/docker-ubuntu:latest
+FROM ghcr.io/hiracchi/docker-ubuntu:22.04
 
 
 ARG WORKDIR="/work"
