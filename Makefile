@@ -1,6 +1,6 @@
-PACKAGE="ghcr.io/hiracchi/docker-doctools"
+PACKAGE=doctools
 TAG=22.04
-CONTAINER_NAME="doctools"
+CONTAINER_NAME=doctools
 
 .PHONY: build start stop restart term logs
 
